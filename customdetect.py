@@ -14,7 +14,6 @@ for i in range(0,len(result)):
     tl = (result[i]['topleft']['x'], result[i]['topleft']['y'])
     br = (result[i]['bottomright']['x'], result[i]['bottomright']['y'])
     label = result[i]['label']
-    # add the box and label and display it
     img = cv2.rectangle(imgcv, tl, br, (0, 255, 0), 2)
     img = cv2.putText(img, label, tl, cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 0), 2)
 cv2.imwrite('Result.jpg',img)
